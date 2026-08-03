@@ -90,12 +90,6 @@ Verify the installation:
 python -c "import torch; print('PyTorch:', torch.__version__); print('Accelerator available:', torch.cuda.is_available())"
 ```
 
-### 4. Optional installation check
-
-```bash
-python -c "import numpy, pandas, matplotlib, yaml; print('Core dependencies imported successfully')"
-```
-
 ## Simulator overview
 
 SPARS is an event-driven simulator for HPC scheduling, resource allocation, and node power management. A simulation combines three types of input:
@@ -282,16 +276,6 @@ Before running all cells, verify that any result-directory variables in the firs
 
 The draft paper presents these analyses as Figures 3–10.
 
-## Running one generated configuration
-
-A concrete YAML configuration can be executed directly:
-
-```bash
-python RunSPARSConfig.py path/to/config.yaml
-```
-
-This is useful for rerunning one failed configuration without restarting the complete suite.
-
 ## General-purpose plots
 
 The repository also includes two plotting utilities independent of the paper notebook.
@@ -366,8 +350,6 @@ The paper reports RL results only for workload datasets with an available corres
 The paper is currently identified as:
 
 > Reza Pulungan, Raka Satya Prasasta, Santana Yuda Pradata, Mursalim, Hiroyuki Takizawa, and Muhammad Alfian Amrizal, “A Smallest-Need-First Job Scheduling Framework with Adaptive Optimization of Idle Node Counts for Energy-Efficient HPC Systems.”
-
-Replace this section with the final publisher-provided citation after publication.
 
 The simulator used by this repository is SPARS:
 
