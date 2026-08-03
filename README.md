@@ -37,7 +37,3 @@ PaperVis.ipynb
 ```
 
 The notebook reads the generated results and creates the figures used in the paper.
-
-## License
-
-MIT License.
