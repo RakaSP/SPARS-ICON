@@ -82,7 +82,7 @@ For a CPU-only installation:
 python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
 ```
 
-For a GPU installation, use the command generated for the machine by the official PyTorch installer `https://pytorch.org/get-started/locally/` and run it inside `SPARS-venv`.
+For a GPU installation, use the command generated for the machine by the [official PyTorch installer](https://pytorch.org/get-started/locally/) and run it inside `SPARS-venv`.
 
 Verify the installation:
 
