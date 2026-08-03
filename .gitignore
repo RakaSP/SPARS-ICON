@@ -24,6 +24,8 @@ platforms/AOBA-THETA.json
 platforms/Generated-Extreme-64.json
 SPARS/Simulator/Algo/snf_ctmdp.py
 PaperVisBACKUP.ipynb
+compare_spars_results.py
+metrics_comparison_report.json
 
 # benchmark_execution_time.py
 # command_list.txt

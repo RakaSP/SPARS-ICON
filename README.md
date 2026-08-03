@@ -82,7 +82,7 @@ For a CPU-only installation:
 python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
 ```
 
-For a GPU installation, use the command generated for the machine by the official PyTorch installer and run it inside `SPARS-venv`.
+For a GPU installation, use the command generated for the machine by the official PyTorch installer `https://pytorch.org/get-started/locally/` and run it inside `SPARS-venv`.
 
 Verify the installation:
 
@@ -295,6 +295,13 @@ python PlotGantt.py results/<UID>
 `PlotMetrics.py` reads the `metrics.csv` files below the selected UID. `PlotGantt.py` reads `node_log.csv` and writes per-run Gantt images.
 
 ## Reproducibility notes
+
+> **RL result variability:** The RL Budiarjo experiments may not reproduce the
+> exact metric values reported in the paper. Separate training runs can begin
+> with different randomly initialized model weights and may also involve other
+> stochastic training operations. Consequently, using the same workload,
+> platform, and hyperparameters does not guarantee an identical trained
+> checkpoint or identical final `metrics.csv` values.
 
 For every reported experiment, retain:
 

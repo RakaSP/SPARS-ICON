@@ -12,7 +12,6 @@ from SPARS.Simulator.Algo.fcfs_baseline_psas import FCFSBaselinePSAS
 from SPARS.Simulator.Algo.fcfs_psas import FCFSPSAS
 from SPARS.Simulator.Algo.fcfs_psus import FCFSPSUS
 from SPARS.Simulator.Algo.snf_baseline_psas import SNFBaselinePSAS
-from SPARS.Simulator.Algo.snf_ctmdp import SNFCTMDP
 from SPARS.Simulator.Algo.snf_icon import SNFICON
 from SPARS.Simulator.Algo.snf_oracle_psas import SNFOraclePSAS
 from SPARS.Simulator.Algo.snf_psas import SNFPSAS
@@ -31,7 +30,6 @@ ALGO_MAP = {
     "easy_psas": EASYPSAS,
     "snf_psas": SNFPSAS,
     "snf_baseline_psas": SNFBaselinePSAS,
-    "snf_ctmdp": SNFCTMDP,
     "snf_icon": SNFICON,
     "snf_oracle_psas": SNFOraclePSAS,
 }
