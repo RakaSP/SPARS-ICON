@@ -1,0 +1,29 @@
+{
+    "generator": "Markovian workload generator",
+    "rng": "numpy.random.default_rng",
+    "seed": 42,
+    "draw_order": [
+        "resources",
+        "interarrivals",
+        "runtimes",
+        "requested_times"
+    ],
+    "num_jobs": 1000,
+    "nb_res": 64,
+    "target_utilization": 0.4,
+    "mean_runtime": 7200.0,
+    "resource_distribution": "geometric",
+    "resource_geometric_p": 0.35,
+    "expected_resources_per_job": 2.8571428571398205,
+    "interarrival_distribution": "exponential",
+    "calculated_mean_interarrival": 803.5714285705745,
+    "runtime_distribution": "exponential",
+    "reqtime_distribution": "exponential",
+    "reqtime_bias": 1.2,
+    "reqtime_mean": 8640.0,
+    "profile_name": "100",
+    "profile_cpu": 10000000000000000000000,
+    "profile_com": 0,
+    "user_id": 0,
+    "workload_output": "workloads/generated-markovian-1000.json"
+}

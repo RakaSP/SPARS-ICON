@@ -1,0 +1,51 @@
+{
+    "seed": 42,
+    "real_workload": "/home/raka/SPARS-ICON/workloads/curriculum-small/generated-markovian-1000.json",
+    "simple_workload": "/home/raka/SPARS-ICON/workloads/curriculum-small/generated-markovian-1000_simple.json",
+    "complex_workload": "/home/raka/SPARS-ICON/workloads/curriculum-small/generated-markovian-1000_complex.json",
+    "real": {
+        "number_of_jobs": 1000,
+        "nb_res": 17,
+        "mean_interarrival_time": 821.6201707218066,
+        "arrival_rate": 0.001217107412445198,
+        "mean_runtime": 7178.335790204188,
+        "service_rate": 0.0001393080554081401
+    },
+    "simple": {
+        "number_of_jobs": 1000,
+        "nb_res": 17,
+        "mean_interarrival_time": 842.464,
+        "arrival_rate": 0.0011869943404109848,
+        "mean_runtime": 7186.571,
+        "service_rate": 0.00013914842001839264
+    },
+    "complex": {
+        "number_of_jobs": 1000,
+        "nb_res": 17,
+        "mean_interarrival_time": 882.051,
+        "arrival_rate": 0.0011337212927597156,
+        "mean_runtime": 7385.813,
+        "service_rate": 0.00013539470874770318
+    },
+    "complex_distribution": {
+        "interarrival": "log1p Gaussian KDE",
+        "runtime": "log1p Gaussian KDE"
+    },
+    "curriculum": [
+        {
+            "stage": 1,
+            "dataset": "/home/raka/SPARS-ICON/workloads/curriculum-small/generated-markovian-1000_simple.json",
+            "epochs": "X"
+        },
+        {
+            "stage": 2,
+            "dataset": "/home/raka/SPARS-ICON/workloads/curriculum-small/generated-markovian-1000.json",
+            "epochs": "X"
+        },
+        {
+            "stage": 3,
+            "dataset": "/home/raka/SPARS-ICON/workloads/curriculum-small/generated-markovian-1000_complex.json",
+            "epochs": "X"
+        }
+    ]
+}

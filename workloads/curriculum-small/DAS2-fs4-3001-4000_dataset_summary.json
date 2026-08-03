@@ -1,0 +1,51 @@
+{
+    "seed": 42,
+    "real_workload": "/home/raka/SPARS-ICON/workloads/curriculum-small/DAS2-fs4-3001-4000.json",
+    "simple_workload": "/home/raka/SPARS-ICON/workloads/curriculum-small/DAS2-fs4-3001-4000_simple.json",
+    "complex_workload": "/home/raka/SPARS-ICON/workloads/curriculum-small/DAS2-fs4-3001-4000_complex.json",
+    "real": {
+        "number_of_jobs": 1000,
+        "nb_res": 64,
+        "mean_interarrival_time": 3894.292,
+        "arrival_rate": 0.0002567860858918643,
+        "mean_runtime": 389.033,
+        "service_rate": 0.002570476026455339
+    },
+    "simple": {
+        "number_of_jobs": 1000,
+        "nb_res": 64,
+        "mean_interarrival_time": 3993.033,
+        "arrival_rate": 0.0002504361972465542,
+        "mean_runtime": 389.46,
+        "service_rate": 0.002567657782570739
+    },
+    "complex": {
+        "number_of_jobs": 1000,
+        "nb_res": 64,
+        "mean_interarrival_time": 5174.803,
+        "arrival_rate": 0.0001932440713202029,
+        "mean_runtime": 402.316,
+        "service_rate": 0.0024856083277821415
+    },
+    "complex_distribution": {
+        "interarrival": "log1p Gaussian KDE",
+        "runtime": "log1p Gaussian KDE"
+    },
+    "curriculum": [
+        {
+            "stage": 1,
+            "dataset": "/home/raka/SPARS-ICON/workloads/curriculum-small/DAS2-fs4-3001-4000_simple.json",
+            "epochs": "X"
+        },
+        {
+            "stage": 2,
+            "dataset": "/home/raka/SPARS-ICON/workloads/curriculum-small/DAS2-fs4-3001-4000.json",
+            "epochs": "X"
+        },
+        {
+            "stage": 3,
+            "dataset": "/home/raka/SPARS-ICON/workloads/curriculum-small/DAS2-fs4-3001-4000_complex.json",
+            "epochs": "X"
+        }
+    ]
+}

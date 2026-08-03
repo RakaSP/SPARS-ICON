@@ -1,0 +1,76 @@
+paths:
+  workload: workloads/json/DAS2-fs1-0-3000.json
+  platform: platforms/AOBA-64.json
+  output: /home/raka/SPARS-ICON/results/0e38ff6d/snf-ssc-nf_alpha-15000.0_beta-1.0/AOBA-64/DAS2-fs1-0-3000/snf_icon_timeout-7200
+run:
+  algorithm: snf_icon
+  algo_config:
+    alpha: 15000.0
+    beta: 1.0
+    arrival_rate: null
+    service_rate: null
+    resource_pmf: null
+    min_spare_nodes: 1
+    max_spare_nodes: null
+    initial_arrival_rate: 0.0002777777777777778
+    arrival_ema_alpha: 0.2
+    service_ema_alpha: 0.1
+    resource_ema_alpha: 0.1
+    runtime_log_sigma_floor: 0.25
+    max_decision_horizon: 86400.0
+    spare_arrival_window: 43200.0
+    immediate_shutdown_on_stale_completion: true
+    respect_timeout: true
+    markov_fallback_enabled: false
+    markov_window_seconds: 7200
+    markov_min_samples: 3
+    markov_max_samples: 1000
+    markov_cv_tolerance: 0.45
+    markov_max_lag1_autocorrelation: 0.65
+    markov_ks_multiplier: 1.25
+    markov_require_service_samples: true
+    markov_ks_param: 3.0
+    decision_log_enabled: true
+    decision_log_path: /home/raka/SPARS-ICON/results/0e38ff6d/snf-ssc-nf_alpha-15000.0_beta-1.0/AOBA-64/DAS2-fs1-0-3000/snf_icon_timeout-7200/scheduler_decision_log.csv
+    timeout: 7200
+  overrun_policy: continue
+  start_time: 0
+  force_wakeup: false
+rl:
+  enabled: false
+  learn: true
+  type: discrete
+  dt: 3600
+  device: cuda
+  epochs: 10
+  checkpoint: null
+  episode_batch_size: 32
+  agents:
+    Budiarjo:
+      class: RL_Agent.SPARS.Budiarjo:Budiarjo
+      params:
+        n_heads: 8
+        n_gae_layers: 3
+        input_dim: 11
+        embed_dim: 128
+        gae_ff_hidden: 512
+        tanh_clip: 10
+        device: cuda
+      optimizer:
+        class: torch.optim:Adam
+        params:
+          lr: 0.0001
+  assign: Budiarjo
+gym:
+  feature_extractor: Budiarjo
+  translator: Budiarjo
+  reward:
+    name: Budiarjo
+    params:
+      weight1: 0.5
+      weight2: 0.5
+      device: cuda
+  learner: Budiarjo
+logging:
+  level: INFO
+  file: results/simulation.log
